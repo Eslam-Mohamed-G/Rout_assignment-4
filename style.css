@@ -1,0 +1,1186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: .8s;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+    padding: 0px;
+    float: left;
+}
+
+li::after {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #f2f2f2;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    transition: all 0.8s ease-in-out;
+}
+
+p {
+    color: #555555;
+}
+
+i {
+    color: #f1f1f1;
+    transition: .5s;
+}
+
+.clr {
+    clear: both;
+}
+
+/*
+To make everything in the middle of div
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+} */
+
+/************************ navbar************************/
+/************************ navbar************************/
+
+nav {
+    width: 100%;
+    transition: 0.5s;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+}
+
+.navbar_container {
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.logo {
+    padding: 15px;
+    color: #ff305b;
+    margin: auto;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+}
+
+.ul-nav {
+    position: absolute;
+    right: 10%;
+}
+
+nav .ul-nav li {
+    padding: 15px;
+    font-size: 17px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav .ul-nav a:hover {
+    color: #ff305b;
+}
+.icon{
+    display: none;
+}
+/************************ home ************************/
+/************************ home ************************/
+
+.home_container {
+    background-image: url("imges/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100vh;
+    font-size: 24px;
+}
+
+.home_content {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.center {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.home_content h1 {
+    margin: 30px 0;
+    color: #ff305b;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home_content p {
+    color: #f1f1f1;
+}
+
+/**************** text animation for the bonus **************/
+
+.text-animation {
+    position: relative;
+    left: -50px;
+}
+
+.text-animation span {
+    position: absolute;
+    width: 1px;
+    margin-left: 4px;
+    text-align: left;
+    overflow: hidden;
+    border-right: 3px solid #f1f1f1;
+    /****w3school.com****/
+
+    animation-name: width;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.text-animation span::before {
+    content: "";
+    overflow: hidden;
+    color: #f1f1f1;
+    animation: words 8s infinite;
+}
+
+@keyframes words {
+    0%, 50% {
+        content: "Developer";
+    }
+
+    51%, 100% {
+        content: "Designer";
+    }
+}
+
+@keyframes width {
+    from {
+        width: 1px;
+    }
+
+    to {
+        width: 115px;
+    }
+}
+
+
+/************************ about ************************/
+/************************ about ************************/
+
+.about_container {
+    color: #555555;
+    padding: 100px 190px 100px 280px;
+}
+
+.about_img {
+    border: 8px solid #555555;
+    border-radius: 5px;
+    width: 355px;
+    float: left;
+}
+
+.img_content {
+    background-image: url(imges/about.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 355px;
+    height: 440px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.img_item {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    transition: .7s;
+    position: relative;
+    top: 450px;
+}
+
+.img_item ul {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.img_content:hover .img_item {
+    top: 0px;
+}
+
+.img_item li {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.img_item li:hover i {
+    color: #ff305b;
+}
+
+.about_content {
+    width: 50%;
+    float: right;
+}
+
+.about_content h1 {
+    text-transform: uppercase;
+    color: black;
+    padding: 0px;
+    margin-bottom: 15px;
+    width: fit-content;
+    height: min-content;
+}
+
+.about_content h1::before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    height: 26px;
+    border-left: 4px solid #ff305b;
+}
+
+/* .about_content h1::after{
+    content: ",";
+    font-size: 40px;
+} */
+
+.about_content p {
+    line-height: 27px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #555555;
+}
+
+.about_ul {
+    margin-bottom: 20px;
+}
+
+.about_ul ul {
+    float: left;
+    margin-right: 40px;
+}
+
+.about_ul span {
+    color: black;
+    font-weight: bold;
+}
+
+.about_ul li {
+    float: none;
+    margin-bottom: 20px;
+}
+
+.btn a {
+    background-color: #ff305b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px 20px 0 0;
+}
+
+.btn a i {
+    margin-left: 10px;
+}
+
+/************************ services ************************/
+/************************ services ************************/
+
+.services_container {
+    background-color: #f1f1f1;
+    padding: 100px 20px;
+}
+
+.header {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 30px;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    display: block;
+    width: 80%;
+    border-bottom: 2px solid #ff305b;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #ff305b;
+    border-bottom: 1px solid #ff305b;
+    width: 35%;
+    height: 10px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.item_center {
+    margin: auto;
+    width: fit-content;
+}
+
+.services_item {
+    width: 270px;
+    text-align: center;
+    padding: 80px 5px 50px;
+    border-radius: 5px;
+    transition: .7s;
+    cursor: pointer;
+    margin-top: 100px;
+    float: left;
+    position: relative;
+}
+
+.services_item i {
+    color: #ff305b;
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.services_item h3 {
+    margin: 20px 0;
+}
+
+.services_item:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.services_item:hover i {
+    font-size: 40px;
+}
+
+/************************ Our Portfolio ************************/
+/************************ Our Portfolio ************************/
+
+.ourPortfolio {
+    padding: 100px 140px;
+}
+
+.btn-center {
+    padding: 100px 0 30px;
+}
+
+#myBtnContainer {
+    width: fit-content;
+    margin: auto;
+}
+
+.ourPortfolio .btn {
+    border: none;
+    background-color: inherit;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #555555;
+}
+
+.ourPortfolio_img {
+    width: 100%;
+}
+
+.ourPortfolio_img img {
+    display: block;
+    width: 100%;
+    z-index: -1;
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+    transition: opacity 1s, transform 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.img {
+    position: relative;
+    width: 31%;
+    margin: 10px;
+    float: left;
+    display: none;
+    overflow: hidden;
+}
+
+.img:hover img {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+    overflow: hidden;
+}
+
+.img i {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+}
+
+.cover {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    transition: .7s;
+}
+
+
+.img:hover .cover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ff305b;
+}
+
+.img:hover i {
+    color: #ff305b;
+    opacity: 1;
+}
+
+.btn.active {
+    color: #ff305b;
+}
+
+.show {
+    display: block;
+}
+
+/************************ Team members ************************/
+/************************ Team members ************************/
+
+.team {
+    background-color: #f2f2f2;
+    padding: 70px;
+    width: 100%;
+}
+
+.team_item {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.8;
+}
+
+.team i {
+    color: #ff305b;
+    font-size: 30px;
+}
+
+.team h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.team h4 {
+    color: #555555;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px;
+}
+
+/************************ Testimonial ************************/
+/************************ Testimonial ************************/
+
+.testimonial_container {
+    padding: 100px;
+}
+
+.testimonial_content {
+    background-color: #f2f2f2;
+    width: 780px;
+    height: 300px;
+    margin: 100px auto 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.degree {
+    width: 200px;
+    height: 300px;
+    background-color: #ff305b;
+    transform: skew(-45deg);
+    position: absolute;
+    left: -150px;
+}
+
+.testimonial_avatar {
+    background-image: url(imges/feedback.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.testimonial_item {
+    width: 540px;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+}
+
+.testimonial_item h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+
+.testimonial_item p {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.testimonial_item h4, .testimonial_item h4 i {
+    color: #555555;
+}
+
+.testimonial_item i {
+    color: goldenrod;
+}
+
+.circles {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.circle_active {
+    width: 20px;
+    height: 9px;
+    background-color: #ff305b;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    margin-right: 5px;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid #ff305b;
+    cursor: pointer;
+    float: right;
+}
+
+/************************ Our Blog ************************/
+/************************ Our Blog ************************/
+
+.ourBlog {
+    background-color: #f2f2f2;
+    padding: 80px;
+}
+
+.flex {
+    width: fit-content;
+    margin: auto;
+    padding: 0 80px;
+}
+
+.ourBlog_container {
+    width: 30%;
+    margin: 10px;
+    margin-top: 80px;
+    float: left;
+}
+
+.blog_card {
+    box-shadow: 0 .5px 1px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* margin-bottom: 25px; */
+    background-color: white;
+}
+.card_img{
+    width: 100%;
+    height: 178px;
+    margin-bottom: 15px;
+}
+
+.blog_card img {
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    border: none;
+}
+
+.blog_content {
+    width: 100%;
+    padding: 20px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.blog_content h3 {
+    margin: 15px 0;
+    /* font-size: 19px; */
+}
+
+.blog_content h2 a {
+    color: #333333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.blog_content a:hover, .blog_content a:hover i {
+    color: #ff305b;
+}
+
+.blog_content h2 a:active {
+    text-decoration: underline;
+    color: #333;
+}
+
+.blog_content p {
+    margin: 15px 0;
+}
+
+.blog_content a, .blog_content a i {
+    color: #333333;
+}
+
+
+/************************ Contact Us ************************/
+/************************ Contact Us ************************/
+
+.contact_container {
+    padding: 80px;
+}
+
+form {
+    margin: 80px auto;
+    width: 75%;
+}
+
+input, textarea {
+    width: 100%;
+    color: #999;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #ff305b;
+}
+
+.nameInput {
+    float: left;
+    min-width: 50%;
+    padding-right: 5px;
+}
+
+.emailInput {
+    float: right;
+    min-width: 50%;
+    padding-left: 5px;
+}
+
+
+.form_item {
+    margin-top: 20px;
+}
+
+button {
+    width: fit-content;
+    color: #ffffff;
+    background-color: #ff305b;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+
+/************************ footer ************************/
+/************************ footer ************************/
+.footer {
+    background-color: #333;
+    padding: 40px;
+}
+
+.footer ul {
+    width: fit-content;
+    margin: auto;
+}
+
+.footer ul li {
+    margin-right: 15px;
+}
+
+.footer ul li:hover i {
+    color: #ff305b;
+    cursor: pointer;
+}
+
+.footer p {
+    width: fit-content;
+    margin: 15px auto;
+    color: #f1f1f1;
+}
+
+.footer p a {
+    color: #ff305b;
+}
+
+.footer p a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 999px) {
+    .logo {
+        position: absolute;
+        left: 4%;
+    }
+
+    .ul-nav {
+        position: absolute;
+        right: 5%;
+    }
+
+    .ul-nav li {
+        padding: 7px;
+    }
+
+    /************************ about ************************/
+    /************************ about ************************/
+    .about_container {
+        padding: 80px 15px;
+    }
+
+    .about_img {
+        border: none;
+        margin-right: 0px;
+    }
+
+    .img_content {
+        width: 300px;
+        height: 400px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+    .about_content p {
+        line-height: 23px;
+        font-size: 15px;
+    }
+
+    .about_ul ul {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .about_ul li {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    /************************ services ************************/
+    /************************ services ************************/
+    .services_item {
+        width: 50%;
+    }
+
+    /************************ Our Portfolio ************************/
+    /************************ Our Portfolio ************************/
+    .ourPortfolio {
+        padding: 100px 10px;
+    }
+
+    .img {
+        width: 47%;
+    }
+
+    /************************ Testimonial ************************/
+    /************************ Testimonial ************************/
+
+    .testimonial_container {
+        padding: 80px 0;
+    }
+
+    .testimonial_content {
+        width: 650px;
+    }
+
+    .testimonial_item {
+        width: 450px;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+    }
+
+    /************************ Our Blog ************************/
+    /************************ Our Blog ************************/
+    .ourBlog {
+        background-color: #f2f2f2;
+        padding: 80px 20px;
+    }
+
+    .flex {
+        width: fit-content;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .ourBlog_container {
+        width: 30%;
+        margin-right: 10px;
+    }
+
+    .card_img{
+        width: 100%;
+        height: 158px;
+    }
+
+    .blog_content {
+        width: 100%;
+        padding: 20px 10px;
+        font-size: 15px;
+        font-weight: 200;
+        line-height: 20px;
+    }
+
+    .blog_content h3 {
+        margin: 15px 0;
+        font-size: 15px;
+    }
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 150px;
+    }
+    /************************ Contact Us ************************/
+    /************************ Contact Us ************************/
+
+    .contact_container {
+        padding: 80px 30px;
+    }
+    form {
+        margin: 100px auto;
+        width: 100%;
+    }
+
+    .nameInput {
+        max-width: 400px;
+    }
+    .emailInput {
+        max-width: 400px;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .logo {
+        position: absolute;
+        left: 20%;
+    }
+
+    .ul-nav {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20%;
+    }
+
+    /************************ home ************************/
+    /************************ home ************************/
+    .home_content {
+        font-size: 20px;
+    }
+
+    .home_content h1 {
+        font-size: 40px;
+    }
+
+    .ourBlog_container {
+        width: 60%;
+        margin-right: 10px;
+    }
+
+    /************************ about ************************/
+    /************************ about ************************/
+    .about_container {
+        padding: 80px 40px;
+    }
+
+    .about_img {
+        border: none;
+        width: 400px;
+        height: 500px;
+        float: none;
+        margin: auto;
+    }
+
+    .img_content {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about_content {
+        line-height: 23px;
+        font-size: 15px;
+        margin: 20px auto;
+        padding: 0;
+        float: none;
+        width: 400px;
+    }
+
+    .about_ul ul {
+        font-size: 15px;
+        margin-right: 10px;
+        float: none;
+    }
+
+    .about_ul li {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .img_item {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        transition: .7s;
+        position: relative;
+        top: 510px;
+    }
+
+    .item_center{
+        width: 60%;
+        margin-top: 100px;
+    }
+
+    .services_item {
+       width: 100%;
+       margin: 0 auto;
+    }
+
+    /************************ Our Portfolio ************************/
+    /************************ Our Portfolio ************************/
+
+    .ourPortfolio_img{
+        width: 75%;
+        margin: auto;
+    }
+
+    .img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /************************ Team members ************************/
+    /************************ Team members ************************/
+
+.team {
+    background-color: #f2f2f2;
+    padding: 70px;
+    width: 100%;
+}
+
+.team_item {
+    width: 25%;
+    float: none;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.8;
+}
+/************************ Testimonial ************************/
+/************************ Testimonial ************************/
+
+.testimonial_content {
+    background-color: #f2f2f2;
+    width: 75%;
+    height: 400px;
+    margin: 100px auto 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial_avatar{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.testimonial_item {
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/************************ Our Blog ************************/
+/************************ Our Blog ************************/
+.flex{
+    margin-top: 80px;
+    width: 75%;
+}
+.ourBlog_container{
+    width: 100%;
+    margin: 0px;
+}
+
+.blog_card{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card_img{
+    height: 250px;
+}
+
+.nameInput {
+    float: none;
+    min-width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.emailInput {
+    float: none;
+    min-width: 100%;
+    padding: 0;
+}
+}
+
+
+@media screen and (max-width: 576px) {
+
+    .img_content,.about_content{
+        width: 90%;
+        margin: 15px 0px;
+    }
+
+    /************************ Our Portfolio ************************/
+    /************************ Our Portfolio ************************/
+
+    .ourPortfolio_img{width: 90%;}
+    .team_item , .team{
+        width: 100%;
+    }
+
+    .testimonial_content{height: 420px;}
+
+    .flex,.ourBlog_container{
+        margin-bottom: 25px;
+        width: 100%; 
+        padding: 0;
+    }
+    iframe {
+        border: none;
+        height: 100%;
+    }
+    .footer p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
+    body{
+        background-color: red;
+    }
+    .item{width: 25%;}
+} */
