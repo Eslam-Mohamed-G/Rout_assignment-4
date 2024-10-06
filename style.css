@@ -1148,7 +1148,21 @@ button:hover {
 
 @media screen and (max-width: 576px) {
 
-    .img_content,.about_content{
+    .about_container{
+        padding: 40px 0;
+        width: 90%;
+        margin: auto;
+    }
+
+    .img_content{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 90%;
+        margin: 15px 0px;
+    }
+
+    .about_content{
         width: 90%;
         margin: 15px 0px;
     }
@@ -1160,6 +1174,8 @@ button:hover {
     .team_item , .team{
         width: 100%;
     }
+
+    .btn a{float: left;}
 
     .testimonial_content{height: 420px;}
 
@@ -1177,10 +1193,3 @@ button:hover {
         font-weight: 500;
     }
 }
-
-/* @media screen and (max-width: 1200px) {
-    body{
-        background-color: red;
-    }
-    .item{width: 25%;}
-} */
