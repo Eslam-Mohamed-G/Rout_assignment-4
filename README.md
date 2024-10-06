@@ -2,6 +2,6 @@
 
 <p align="center">
   <kbd>
-    <img src="previewFokir.png"></img>
+    <img src="./previewFokir.png"></img>
   </kbd>
 </p>
